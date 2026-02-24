@@ -15,7 +15,7 @@
                 <li><a href="#sobre">Sobre mim</a></li>
                 <li><a href="#projeto">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
-                <li><a href="https://google.com.br" target="_blank">Goole</a></li>
+                <li><a href="https://google.com.br" target="_blank">Google</a></li>
                 <!--Sobre mim -->
             </ul> 
         </nav>
@@ -85,12 +85,45 @@
         <section id="contato">
             <h2>Contato</h2>
 
-            <p>Tem um projeto em mente? Entre em contato.</p>
+            <p>Tem um projeto em mente? Entre em contato!</p>
 
-            <address>
-                E:mail: <a href="mailto:ailemsnt@gmail.com">ailemsnt@gmail.com</a>
-                Telefone: <a href="tel+55999999-9999">(99) 99999-9999</a> 
-            </address>
+            <form action="">
+                <label for="nome">Primeiro nome: </label>
+                <input type="text" id="nome" name="nome" required><br>
+
+                <label for="sobrenome">Sobrenome: </label>
+                <input type="text" id="sobrenome" name="sobrenome" required><br>
+
+                <label for="email">E-mail: </label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="telefone">Telefone: </label>
+                <input type="tel" id="telefone" name="telefone"><br>
+
+                <label for="assunto">Assunto: </label>
+                <select name="assunto" id="assunto">
+                    <option value="orcamento">Orçamento</option>
+                    <option value="duvida">Dúvida</option>
+                    <option value="outro">Outro</option>
+                </select>
+                <br>
+
+                <label for="mensagem">Mensagem: </label>
+                <textarea name="mensagem" id="mensagem" cols="30" rows="5" required></textarea> <br>
+
+                <label for="arquivo">Selecione um arquivo para enviar:</label> <br>
+                <input type="file" name="arquivo" id="arquivo"> <br>
+
+                <label for="nota">Qual a nota que esse site merece?</label> <br>
+                <input type="range" name="nota" id="nota" min="1" max="5" step="1" value="5"> <br>
+   
+                <input type="checkbox" id="inscricao" name="inscricao">
+                <label for="inscricao">Deseja receber minha newsletter? Fique por dentro.</label>
+                <br>
+
+                <input type="submit" value="Enviar mensagem">
+                <input type="reset" value="Limpar dados">
+            </form>
 
         </section>
 
