@@ -5,6 +5,7 @@ function validarEmail(email) {
     if(regexEmail.test(email)){  
         emailValido = true; 
     } else {
+        console.log("E-mail inválido"); 
         alert("E-mail inválido.");
     }
     return emailValido;
@@ -17,6 +18,7 @@ function validarNome(nome) {
     if(regexNome.test(nome)){
         nomeValido = true;
     } else {
+        console.log("Nome inválido"); 
         alert("Informe o nome completo.");
     }
     return nomeValido;
@@ -28,32 +30,50 @@ function validarMensagem(mensagem){
 
     if(regexMensagem.test(mensagem)){
         msgValida = true;
-    } else {    
+    } else { 
+        console.log("Mensagem inválida.");    
         alert("Mensagem informada com conteúdo inválido.");
     }
 
     return msgValida;
 }
 
-function validarTermos(termos){
-    if (!termos.checked) {
+function validarTermos(termos){    
+    if (termos.checked) {        
+        return true;
+    } else {
+        console.log("Termos não aceitos."); 
         alert("Você deve aceitar os termos.");
         return false;
-    } else {
-        return true;
     }
+}
+
+function validarTelefone(telefone){
+    const regexTelefone = /^(\d{2})(9\d{4}|\d{4})\d{4}$/;
+    let telValido = false;
+
+    if (regexTelefone.test(telefone)){
+        telValido = true;
+    } else {
+        console.log("Telefone inválido." + telefone); 
+        alert("Informe o número do telefone com DDD.");
+    }
+
+    return telValido;
 }
 
 function enviarEmail(event){
     event.preventDefault();
-    const nome   = document.getElementById("nome").value;
-    const email  = document.getElementById("email").value;  
-    const mensagem = document.getElementById("mensagem").value;
-    const termos   = document.getElementById("chkTermos").value;   
+    const nome     = document.getElementById("nome").value;
+    const email    = document.getElementById("email").value;  
+    const mensagem = document.getElementById("mensagem").value;      
+    const telefone = document.getElementById("telefone").value;
+    const termos   = document.getElementById("termos"); 
 
-    if ((validarNome(nome)) && (validarEmail(email)) && (validarMensagem(mensagem)) && (validarTermos(termos))){
+    if ((validarNome(nome)) && (validarEmail(email)) && (validarTelefone(telefone)) && (validarMensagem(mensagem)) && (validarTermos(termos))){
         console.log("Dados válidos. Preparar envio de e-mail"); 
-        alert("E-mail enviado. Aguarde meu retorno em breve!");
+        alert("E-mail pronto para ser enviado. Aguarde meu retorno em breve!");
+        formulario.reset();
     } else {
         console.log("Dados inválidos. Não enviar e-mail"); 
     }    
