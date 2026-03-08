@@ -4,37 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ailem</title>
+    <title>Ailem Santos</title>
+
+    <!--Fonte do Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <!--Estilização-->
+    <link rel="stylesheet" href="style.css">    
+
+    <!--scripts-->
+    <script src="script.js"></script>
 </head>
 
-<body>
+<body>      
     <header>
-        <h1>Ailem</h1>
         <nav> <!--Sessão navegação -->
-            <ul><!-- Lista não ordenada -->
-                <li><a href="#sobre">Sobre mim</a></li>
-                <li><a href="#projeto">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="https://google.com.br" target="_blank">Google</a></li>
-                <!--Sobre mim -->
+            <div id="btnMenu" class="menu-hamburger">☰</div>
+
+            <ul id="menu" class="menu">
+                <li><a href="#inicio" class="ativo">Início</a></li>
+                <li><a href="#sobre" class="ativo">Sobre mim</a></li>
+                <li><a href="#projeto" class="ativo">Projetos</a></li>
+                <li><a href="#contato" class="ativo">Contato</a></li>                               
             </ul> 
         </nav>
     </header>
 
-    <section id="sobre">
-        <h2>Sobre mim</h2>
+    <section id="inicio" class="content">  <!--Apresentação -->      
+        <div id="inicio-texto" class="inicio-texto">
+            <h1 class="fonte-cor-branca">AILEM</h1>           
+            <h1 class="fonte-cor-verde">SANTOS</h1>
 
-        <img src="./img/img_perfil.png" alt="Imagem de foto de perfil" title="Imagem de perfil">
+            <article>
+                <br>
+                <p>Olá! Sou a Ailem!.</p>
+                <p>Especialista em Engenharia de Software, graduada em Informática de Gestão, Scrum Master especialista, Six Sigma Yellow Belt. Há quase 20 anos de experiência na área de desenvolvimento de softwares e aplicativos, utilizando diversas ferramentas e frameworks para entregar soluções em sistemas.</p>
+                <p>Meu lema é foco e disciplina. Minha filosofia é o Kaisen - melhoria contínua. </p>
+                <p>Sou eterna estudante de TI... eu amo o mundo DEV! &#10084 </p> 
+                <p>Artista e artesã por amor e por hobby. Pincel e tintas em uma mão, agulha e fios na outra. Escritora amadora e leitora "bookaolich". É preciso equilibrar corpo e mente para que tenhamos mais momentos de qualidade.   
+                </p>                  
+            </article>                                       
+        </div>
+            
+        <div id="inicio-imagem" >
+            <img src="./img/img_perfil2.png" alt="Imagem de foto de perfil" title="Imagem de perfil" class="img-perfil">
+        </div>   
+    </section>
+
+    <section id="sobre" class="content">   <!--Sobre mim -->   
+            <h1>
+                <a href="#inicio" class="link-titulo">
+                    <span class="fonte-cor-branca">SOBRE</span>
+                    <span class="fonte-cor-verde">MIM</span>
+                </a>
+            </h1>        
 
         <article>
+            <p>                
+                Iniciei na carreira de desenvolvimento em 2008, com sistemas de gestão comercial e fiscal, participei ativamente de projetos de implementação de NF-e, CT-e, MDF-e. Trabalhando com análise de requisitos, design, implementação, teste, revisão e manutenção de código.
+            </p>
             <p>
                 No mundo "dev" desde 2008. Já tive oportunidade de trabalhar com várias linguagens de programação, frameworks, ferramentas e bancos de dados, conhecer e aprender mais sobre tecnologias, tais como: Delphi (Object Pascal), Java, Android, Flutter - Dart, NestJS, C#, Angular, Python, Oracle, Postgres, Firebird, Sqlite, MySql, SqlServer.
                 Gosto muito de compartilhar conhecimento e experiências.
-            </p>
-            <p>
-                Sou a Ailem! Espcialista em Engenharia de Software, graduada em Informática de Gestão, 
-                Iniciei na carreira de desenvolvimento em 2008, com sistemas de gestão comercial e fiscal, participei ativamente de projetos de implementação de NF-e, CT-e, MDF-e. Trabalhando com análise de requisitos, design, implementação, teste, revisão e manutenção de código.
-            </p>
+            </p>            
             <p>
                 Com a chegada do SO Android, a partir da versão 4, comecei a desenvolver aplicativos comerciais e apoio, na emissão de NF-e, pedidos, orçamentos.
             </p>
@@ -52,120 +87,253 @@
             </p>
 
             <aside>
-
-                <h3>Habilidades</h3>
-
+                <h2>Habilidades comportamentais</h2>
                 <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
+                    <li>Inteligência emocional</li>
+                    <li>Liderança</li>
+                    <li>Agilidade</li>
+                    <li>Produtividade</li>
+                    <li>Proatividade</li>
+                    <li>Comunicação eficaz</li>
+                    <li>Colaboração</li>
                 </ul>
-
             </aside>
-
-        </article>
-
-    </section>
-
-    <section id="projeto">
-        <h2>Projetos</h2>
-
-        <article>
-            <h3>Portfólio</h3>
-
-            <p>
-                Este foi o primeiro site que desenvolvi estudando front-end.
-            </p>
         </article>
     </section>
-
-    <section id="habilidades">
         
-        <h2>Habilidades e tecnologias</h2>
-
+    <section id="habilidades" class="content">
+        <h2>Formação</h2>
         <table>
-
             <thead>
                 <tr>
-                    <th>Tecnologia</th>
-                    <th>Nível</th>
-                    <th>Descição</th>
+                    <th>Nível | Formação</th>
+                    <th>Conclusão</th>
+                    <th>Instituição</th>
+                </tr>                
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Profissionalizante - Desenvolvimento software back-end front-end</td>
+                    <td>Andamento</td>
+                    <td>SENAI - SCTec</td>
+                </tr>
+                <tr>                    
+                    <td>Capacitativo - Desenvolvimento softwares web</td>
+                    <td>2022</td>
+                    <td>UFSC - Universidade Federal de Santa Catarina</td>
+                </tr>
+                <tr>
+                    <td>Especialização - Engenharia de Software</td>
+                    <td>2012</td>
+                    <td>UnC - Universidade do Contestado</td>
+                </tr>
+                <tr>
+                    <td>Graduação - Informática de Gestão</td>
+                    <td>2008</td>
+                    <td>UNIUV - Centro Universitário de União da Vitória</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br><br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Certificações e Licenças</th>                    
+                </tr>                
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Internacional Scrum master | Kanban master - SCRUM AS</td>                    
+                </tr>
+                <tr>
+                    <td>Yellow Belt - FM2S</td>                    
+                </tr>
+                <tr>                    
+                    <td>Six Sigma Yellow Belt - 6Sigma study</td>                   
+                </tr>
+                <tr>                    
+                    <td>Lean - FM2S</td>                   
+                </tr>
+                <tr>
+                    <td>LGPD - Certiprof</td>
+                </tr>
+                <tr>
+                    <td>Intenational Agile - SCRUM AS</td>
+                </tr>
+                <tr>
+                    <td>Liderança - Conquer</td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <br/><br/>
+        <h2>Tecnologias e Habilidades</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tecnologia</th>                   
+                    <th>Descrição</th>
                 </tr>
             </thead>
 
             <tbody>
                 <tr>
-                    <td>HTML</td>
-                    <td>Iniciante</td>
-                    <td>Capaz de construir estruturas de páginas web semânticas e responsivas</td>
+                    <td>Banco de dados</td>
+                    <td>Oracle, PostreSQL, Firebird, MySql, SqlServer, Sqlite</td>
                 </tr>
-
                 <tr>
-                    <td>CSS</td>
-                    <td>Intermediário</td>
-                    <td>Experiência com flexbox, grid e animações</td>
-                </tr>             
-
+                    <td>Desenvolvimento Desktop</td>
+                    <td>Object Pascal (Delphi), Java, C#</td>
+                </tr>
                 <tr>
-                    <td>Javascript</td>
-                    <td>Básico</td>
-                    <td>Desenvolvimento de scripts do lado do cliente para interações</td>
+                    <td>Desenvolvimento Web</td>
+                    <td>Node, React, Javascript, CSS, HTML</td>
+                </tr>
+                <tr>
+                    <td>Desenvolvimento Mobile</td>
+                    <td>Android java, Flutter, Dart</td>
+                </tr>  
+                <tr>
+                    <td>Controle de versão</td>
+                    <td>Git, SVN</td>
                 </tr> 
+                <tr>
+                    <td>Infra</td>
+                    <td>Docker, Kubernetes</td>
+                </tr>                 
+                <tr>
+                    <td>Gestão e fluxo de trabalho</td>
+                    <td>Azure DevOps, Trello</td>
+                </tr>  
+                <tr>
+                    <td>Agilidade</td>
+                    <td>SCRUM, Kanban, Lean, Six sigma</td>
+                </tr> 
+                <tr>
+                    <td>Design</td>
+                    <td>Figma, Adobe Ilustrator, Adobe Photoshop, Corel Draw, Canva</td>
+                </tr> 
+                <tr>
+                    <td>Workspace</td>
+                    <td>Miro, FigJam</td>
+                </tr>
+                <tr>
+                    <td>Idiomas</td>
+                    <td>Português, Inglês, Espanhol</td>
+                </tr>                 
             </tbody>
-
-        </table>
-
+        </table>          
     </section>
 
-    <footer>
-        <p>Direitos reservados à Ailem</p>
+    <section id="projeto" class="content">
+        <h1>
+            <a href="#inicio" class="link-titulo">
+                <span class="fonte-cor-branca">MEUS</span>                                
+            </a>
+        </h1>        
+        <h1 class="fonte-cor-verde">PROJETOS</h1>
 
-        <section id="contato">
-            <h2>Contato</h2>
+        <article>
+            <h3>&#x2605; Portfólio</h3>
+            <p>Alguns projetos realizados em diversas linguagens e IDEs:</p>
 
-            <p>Tem um projeto em mente? Entre em contato!</p>
+            <div id="lista-projetos">
+                <div class="card">
+                    <img src="./img/prj_nota2.jpg" alt="Imagem do projeto de documentos fiscais" class="img-prj">
+                    <h2>Emissão de documentos fiscais</h2>
+                    <p>Implementação em ERP comercial desktop, desenvolvido em Delphi, para realizar autorização de documentos fiscais na Receita Federal, sendo NF-e, CT-e, MDF-e.</p>
+                </div>
 
-            <form action="">
-                <label for="nome">Primeiro nome: </label>
-                <input type="text" id="nome" name="nome" required><br>
+                <div class="card">
+                    <img src="./img/prj_pedidos22.jpg" alt="Imagem do projeto aplicativo de pedidos" class="img-prj">
+                    <h2>Aplicativo Gerenciamento de pedidos e orçamentos</h2>
+                    <p>Aplicativo de gerenciamento de pedidos e orçamentos, consulta de produtos e gráficos, desenvolvido em Java para SO Android. Emissão, impressão dos documentos em impressora bluetooth. Este é tratado como um módulo do ERP, integrando informações.</p>
+                </div>
+                
+                <div class="card">
+                    <img src="./img/prj_estoque.jpg" alt="Imagem do projeto aplicativo de contagem de estoque" class="img-prj">
+                    <h2>Contagem de estoque e Busca de preços</h2>
+                    <p>Aplicativos de contagem de estoque e busca de preços desenvolvidos em Flutter e Dart para dispositivos móveis. Ambos com propósito de ler o código de barras do produto, no primeiro o usuário informa o estoque para alimentar o banco de dados, e no segundo, para verificar o preço de venda. Design com Figma.</p>
+                </div>
 
-                <label for="sobrenome">Sobrenome: </label>
-                <input type="text" id="sobrenome" name="sobrenome" required><br>
+                <div class="card">
+                    <img src="./img/prj_site.jpg" alt="Imagem do site de pet shop" class="img-prj">
+                    <h2>Website Pet Shop</h2>
+                    <p>Projeto desenvolvido para Pet shop, desenvolvido utilizando HTML, CSS e Javascript, contendo a apresentação do estabelecimento, tipos de serviços oferecidos, tabela de valores, contato com localização no mapa, sendo possível agendar os serviços diretamente pelo site ou via whatsapp. O design para aprovação prévia foi desenvolvido em Photoshop.</p>
+                </div>
+                <div class="card-destaque"> 
+                    <p>&#x2605; &#x2605; &#x2605; &#x2605; &#x2605;</p>                   
+                    <p>Mais sobre projetos e experiências profissionais, acesse meus espaços: Linkedin e o Github</p>  
+                    
+                    <div class="links">
+                        <a href="https://www.linkedin.com/in/ailemsantos" target="_blank">
+                            <img src="./img/icons/linkedin.png" alt="Logo Linkedin" title="Logo do Linkedin">                            
+                        </a>
+                        <a href="https://github.com/ailemsnt" target="_blank">
+                            <img src="./img/icons/github.png" alt="Logo Github" title="Logo do Github">                           
+                        </a>  
+                    </div>                                         
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <footer>        
+
+        <section id="contato" class="content">         
+            <h1>
+            <a href="#inicio" class="link-titulo">
+                <span class="fonte-cor-branca">ENTRE EM</span>                                
+            </a>
+        </h1>        
+        <h1 class="fonte-cor-verde">CONTATO</h1>
+
+            <p>Tem um projeto em mente? Quer trocar experiências dev?</p>
+            <p>Entre em contato!</p>                
+
+            <form id="formulario" action="">
+                <label for="nome">Seu nome completo:</label>
+                <input type="text" id="nome" class="caixa-texto" name="nome" required placeholder="Nome completo" autocomplete="off">
 
                 <label for="email">E-mail: </label>
-                <input type="email" id="email" name="email" required><br>
+                <input type="email" id="email" class="caixa-texto" name="email" required placeholder="e-mail" autocomplete="off">
 
-                <label for="telefone">Telefone: </label>
-                <input type="tel" id="telefone" name="telefone"><br>
+                <label for="telefone">Telefone com DDD:</label>
+                <input type="tel" id="telefone" class="caixa-texto" name="telefone" placeholder="(47) 91234-5678">
 
-                <label for="assunto">Assunto: </label>
-                <select name="assunto" id="assunto">
+                <label for="assunto">Assunto:</label>
+                <select name="assunto" id="assunto" class="caixa-texto">
                     <option value="orcamento">Orçamento</option>
                     <option value="duvida">Dúvida</option>
                     <option value="outro">Outro</option>
-                </select>
-                <br>
+                </select>                
 
                 <label for="mensagem">Mensagem: </label>
-                <textarea name="mensagem" id="mensagem" cols="30" rows="5" required></textarea> <br>
-
-                <label for="arquivo">Selecione um arquivo para enviar:</label> <br>
-                <input type="file" name="arquivo" id="arquivo"> <br>
-
-                <label for="nota">Qual a nota que esse site merece?</label> <br>
-                <input type="range" name="nota" id="nota" min="1" max="5" step="1" value="5"> <br>
-   
-                <input type="checkbox" id="inscricao" name="inscricao">
-                <label for="inscricao">Deseja receber minha newsletter? Fique por dentro.</label>
-                <br>
-
-                <input type="submit" value="Enviar mensagem">
-                <input type="reset" value="Limpar dados">
+                <textarea name="mensagem" id="mensagem" cols="40" rows="6" required minlength="40" class="caixa-mensagem" placeholder="Descreva o motivo do contato"></textarea> 
+                
+                <div class="checkbox">
+                    <input type="checkbox" id="chkTermos" class="checkbox">
+                    <label for="chkTermos">Li e aceito os termos de envio</label>
+                </div>
+                <div class="botoes">                    
+                    <input type="submit" id="btnEnviar" class="btn-acao" value="ENVIAR MENSAGEM" onclick="enviarEmail(event)">
+                    <input type="reset"  id="btnLimpar" class="btn-acao" value="LIMPAR DADOS">
+                </div>                
             </form>
-
         </section>
 
+        <section id="final" class="content">
+            <p id="contadorNovoAno"></p>           
+            <p>
+                <h5>&copy; Direitos reservados à Ailem</h5>
+            </p>            
+        </section>
+
+        <hr class="linha-footer">               
     </footer>
+
 </body>
 
 </html>

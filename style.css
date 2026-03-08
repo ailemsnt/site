@@ -1,0 +1,357 @@
+/* Reset de página*/
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;    
+    background-color: #8173B2;
+    color: #F6F4F3;
+    text-align: justify;    
+}
+
+/* Header*/
+header {
+    background-color: black;   
+    padding-right: 20px ;
+    min-height: 20px;   
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+/*Seção inicial*/
+#inicio {
+    padding: 15px 10%;
+    background-color: #62578a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;              
+}
+
+.inicio-texto{
+    flex: 1 1 400px;
+}
+
+.inicio-texto h1{    
+    margin-bottom: -30px;
+    margin-top: 1px;
+}
+
+/*Imagem do perfil - comportamento diferente*/
+.inicio-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.img-perfil{    
+    height: 90vh; /* ocupa a altura da tela */          
+    min-width: 10%;
+    padding-left: 20px;
+}
+
+.img-perfil img{    
+    display: flex;
+    justify-content: center;  
+    height: auto;  
+    max-width: 400px;
+    min-width: 100px;     
+}
+
+/*Conteúdo da página*/
+.content {
+    padding: 10px 40px 10px 40px;    
+}
+
+/*Links modificados*/
+.link-titulo {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link-titulo span {
+    display: inline; /* mantém na mesma linha */
+}
+
+/*Tabelas*/
+table thead tr th {
+    text-align: left;  
+    padding-left: 10px;
+    color: #E1FF30;
+}
+
+table tbody tr td {
+    text-align: left;
+    padding-left: 10px;
+}
+
+/*Menu navegação*/
+header nav ul {
+    list-style: none;
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;  
+    gap: 30px;    
+}
+
+header nav ul li a {
+    text-decoration: none;   
+    position: relative;
+    color: white;
+    padding-bottom: 5px;
+}
+
+/*animação menu*/
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #FF66C4;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+/*------*/
+
+.menu{
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu-hamburger{
+    display: none;
+    font-size: 28px;
+    cursor: pointer;  
+    background-color: black;
+    border-radius: 5px;  
+}
+
+/*Títulos*/
+h1 {
+    font-family: "Anton", sans-serif;
+    font-optical-sizing: calc();
+    font-weight: 600;
+    font-style: normal;
+    color: white; 
+    margin: 0;
+    text-align: left;
+    font-size: clamp(40px, 8vw, 120px);
+}
+
+h2 {
+    font-family: "Anton", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: white;  
+}
+
+h4 {
+    color: #E1FF30; 
+    font-weight: normal;
+}
+
+h5 {
+    font-weight: lighter;
+    padding-left: 20px;
+}
+
+/*Textos diversos*/
+.fonte-cor-branca{
+    color: white;  
+    letter-spacing: 2px;
+}
+
+.fonte-cor-verde{
+    color: #E1FF30;  
+    margin-top: -30px;
+    letter-spacing: 2px; 
+}
+
+/*Seção projetos*/
+#projeto {    
+    background-color: #62578a;    
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;
+}
+
+.img-prj {
+    max-width: 250px;
+    min-width: 160px;
+    width: 25%;
+    height: auto;
+}
+
+#lista-projetos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card,
+.card-destaque{
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #8173B2;
+    padding: 10px;
+    text-align: center;
+}
+
+.card-destaque {
+    border-color: #E1FF30;
+}
+
+.links{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Rodapé/Final*/
+/*Formulário*/
+form {
+    width: 500px;
+    margin: 0 auto;
+}
+
+#formulario {
+    text-align: left;   /* garante que texto e inputs fiquem à esquerda */
+    max-width: 600px;   /* opcional, para não ocupar toda a tela */
+    margin: 0;          /* remove margem do form */
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    width: 100%;
+    max-width: 500px;
+}
+
+/*Inputs*/
+.caixa-texto,
+.caixa-mensagem{    
+    background-color: #F6F4F3;
+    border: #8173B2;    
+    min-width: 150px;
+    font-family: "Quicksand", sans-serif;
+    margin-bottom: 5px;    
+}
+
+.caixa-texto {
+    height: 25px;
+}
+
+.caixa-mensagem {        
+    min-height: 45px;    
+    margin-bottom: 10px;
+}
+
+.checkbox{
+    padding-bottom: 10px;
+    accent-color: #FF66C4;    
+}
+
+/*Botões*/
+.botes {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+}
+
+.btn-acao{
+    color: white;
+    font-weight: bold;
+    background-color: #FF66C4;
+    border-radius: 20px;
+    padding: 5px 20px;
+    width: max-content;
+    height: 30px;
+    border: none;
+    box-shadow: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;   
+}
+
+/*Linha horizontal fechamento página*/
+.linha-footer {
+    border: 0;
+    height: 20px;
+    background-color: black;
+    margin-bottom: 0px;
+    color: #F6F4F3;
+}
+
+/*== PARTICULARIDADES PARA LAYOUT RESPONSIVO ==*/
+@media (max-width: 768px){  
+    /*Seção inicial*/  
+    #inicio{
+        flex-direction: column;
+        text-align: center;
+        padding: 5px 10%;
+    }
+    
+    .inicio-texto h1{    
+        margin-bottom: -20px;
+    }
+
+    .inicio-imagem{
+        justify-content: center;       
+        margin-right: 10px;
+    }
+
+    .img-perfil{    
+        height: 40vh; /* ocupa a altura da tela */                 
+    }
+
+    /*Textos diversos*/
+    .fonte-cor-verde{ 
+        margin-top: -20px;        
+    }
+
+    /*Menu navegação*/
+    .menu{
+        display: none;
+        flex-direction:  column;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        background: black;
+        width: 200px;
+        padding: 20px;
+        transition:  0.3s;
+    }
+
+    .menu.ativo{
+        display: flex;
+    }
+
+    .menu-hamburger{
+        display: block;
+    }
+
+    /*Botões*/
+    .botes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-acao {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
